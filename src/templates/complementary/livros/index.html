@@ -1,0 +1,47 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Recomendações de Livros - Academia do Investidor{% endblock %}
+
+{% block content %}
+<div class="container complementary-content">
+    <h2>Conteúdo Complementar: Recomendações de Livros</h2>
+    <p>Expanda seus horizontes e aprofunde seus conhecimentos com leituras selecionadas sobre investimentos, finanças pessoais e mentalidade financeira. Separamos alguns clássicos e obras modernas que podem transformar sua visão sobre o dinheiro.</p>
+
+    <div class="recommendation-list">
+        <h3>Clássicos Essenciais</h3>
+        <div class="recommendation-item">
+            <h4>O Investidor Inteligente</h4>
+            <p><strong>Autor:</strong> Benjamin Graham</p>
+            <p>Considerado a bíblia do investimento em valor (value investing), Graham ensina os princípios fundamentais para investir com segurança e foco no longo prazo, diferenciando investimento de especulação. Leitura obrigatória para quem quer entender a filosofia que guiou Warren Buffett.</p>
+            <img src="{{ url_for('static', filename='img/livro_investidor_inteligente_placeholder.jpg') }}" alt="Capa O Investidor Inteligente" class="img-fluid book-cover">
+        </div>
+        <div class="recommendation-item">
+            <h4>Pai Rico, Pai Pobre</h4>
+            <p><strong>Autor:</strong> Robert T. Kiyosaki</p>
+            <p>Um best-seller que mudou a mentalidade de milhões sobre dinheiro. Kiyosaki contrasta os ensinamentos de seu pai (funcionário público) com os de seu "pai rico" (empreendedor), enfatizando a importância da educação financeira, de adquirir ativos e de fazer o dinheiro trabalhar para você.</p>
+             <img src="{{ url_for('static', filename='img/livro_pai_rico_placeholder.jpg') }}" alt="Capa Pai Rico, Pai Pobre" class="img-fluid book-cover">
+        </div>
+        <!-- Adicionar mais clássicos -->
+
+        <h3>Leituras Modernas e Práticas</h3>
+        <div class="recommendation-item">
+            <h4>Os Segredos da Mente Milionária</h4>
+            <p><strong>Autor:</strong> T. Harv Eker</p>
+            <p>Eker argumenta que nosso sucesso financeiro está diretamente ligado aos nossos modelos mentais sobre dinheiro. O livro explora 17 "arquivos de riqueza" que diferenciam a mentalidade dos ricos da mentalidade das outras pessoas.</p>
+             <img src="{{ url_for('static', filename='img/livro_segredos_mente_placeholder.jpg') }}" alt="Capa Os Segredos da Mente Milionária" class="img-fluid book-cover">
+        </div>
+         <div class="recommendation-item">
+            <h4>Rápido e Devagar: Duas Formas de Pensar</h4>
+            <p><strong>Autor:</strong> Daniel Kahneman</p>
+            <p>Embora não seja exclusivamente sobre finanças, este livro do ganhador do Prêmio Nobel de Economia é fundamental para entender os vieses cognitivos que afetam nossas decisões, inclusive as financeiras. Ajuda a tomar decisões mais racionais e menos impulsivas.</p>
+             <img src="{{ url_for('static', filename='img/livro_rapido_devagar_placeholder.jpg') }}" alt="Capa Rápido e Devagar" class="img-fluid book-cover">
+        </div>
+        <!-- Adicionar mais modernos -->
+    </div>
+
+    <p><em>Lembre-se: A leitura é um investimento em si mesmo. Busque constantemente expandir seu conhecimento.</em></p>
+
+    <a href="{{ url_for('complementary.index') }}" class="btn btn-secondary">Voltar para Conteúdo Complementar</a> {# Ajustar rota se necessário #}
+
+</div>
+{% endblock %}

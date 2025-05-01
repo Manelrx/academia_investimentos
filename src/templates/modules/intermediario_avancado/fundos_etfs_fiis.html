@@ -1,0 +1,37 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Fundos, ETFs e FIIs - Intermediário/Avançado{% endblock %}
+
+{% block content %}
+<div class="container module-content">
+    <h2>Módulo Intermediário/Avançado: Fundos de Investimento, ETFs e FIIs</h2>
+
+    <article>
+        <p>Além de investir diretamente em títulos de renda fixa ou ações, existem formas de acessar esses mercados de maneira diversificada e, muitas vezes, com gestão profissional. Fundos de Investimento, ETFs e FIIs são veículos coletivos que reúnem o dinheiro de diversos investidores para aplicar em uma carteira de ativos, cada um com suas particularidades.</p>
+
+        <section>
+            <h3>Fundos de Investimento</h3>
+            <p>Um Fundo de Investimento funciona como um condomínio: vários investidores (cotistas) juntam seus recursos, que são administrados por um gestor profissional. Esse gestor, seguindo uma política de investimento definida no regulamento do fundo, decide onde aplicar o dinheiro (em ações, renda fixa, multimercado, câmbio, etc.). Ao investir em um fundo, você compra cotas, e a rentabilidade do seu investimento dependerá da valorização dessas cotas, que por sua vez reflete o desempenho da carteira de ativos do fundo, descontadas as taxas (como taxa de administração e, às vezes, taxa de performance).</p>
+            <p>A grande vantagem dos fundos é o acesso à gestão profissional e à diversificação, mesmo com valores menores de aplicação. Você delega as decisões de compra e venda de ativos a um especialista. Existem fundos para todos os perfis de risco e objetivos: fundos de renda fixa, fundos de ações, fundos multimercado (que mesclam diferentes classes de ativos), fundos cambiais, entre outros. É crucial ler o regulamento e o prospecto do fundo antes de investir para entender sua política, riscos, custos e público-alvo.</p>
+        </section>
+
+        <section>
+            <h3>ETFs (Exchange Traded Funds)</h3>
+            <p>ETFs, também conhecidos como Fundos de Índice, são fundos de investimento cujas cotas são negociadas diretamente na bolsa de valores, como se fossem ações. A principal característica dos ETFs é que eles buscam replicar o desempenho de um determinado índice de referência (benchmark). Por exemplo, existem ETFs que replicam o Ibovespa (principal índice de ações da bolsa brasileira), o S&P 500 (índice das 500 maiores empresas dos EUA), índices de renda fixa (como o IMA-B), índices de small caps, etc.</p>
+            <p>Investir em ETFs é uma forma simples e de baixo custo para obter exposição diversificada a um mercado ou setor específico. Como a gestão é passiva (apenas replica o índice), as taxas de administração dos ETFs costumam ser bem menores que as dos fundos de gestão ativa. A compra e venda das cotas é feita pelo home broker, oferecendo liquidez durante o pregão da bolsa.</p>
+        </section>
+
+        <section>
+            <h3>FIIs (Fundos de Investimento Imobiliário)</h3>
+            <p>Os FIIs são fundos que investem predominantemente em ativos do setor imobiliário. Eles reúnem recursos de diversos investidores para aplicar em empreendimentos imobiliários, como shoppings centers, lajes corporativas (escritórios), galpões logísticos, hospitais, hotéis, ou em títulos de dívida imobiliária (como CRIs - Certificados de Recebíveis Imobiliários). As cotas dos FIIs também são negociadas na bolsa de valores.</p>
+            <p>A principal atratividade dos FIIs é a possibilidade de receber rendimentos mensais isentos de Imposto de Renda para pessoa física, provenientes dos aluguéis dos imóveis ou dos juros dos títulos que compõem a carteira do fundo. Além disso, o investidor pode lucrar com a valorização das cotas na bolsa. Investir em FIIs permite acessar o mercado imobiliário de forma diversificada, com valores mais acessíveis e sem a burocracia de comprar um imóvel físico diretamente.</p>
+        </section>
+
+        <p>Fundos de Investimento, ETFs e FIIs oferecem alternativas interessantes para diversificar a carteira e acessar diferentes mercados e estratégias, muitas vezes com gestão especializada e custos acessíveis. A escolha entre eles dependerá dos seus objetivos, perfil de risco e da estratégia de investimento que você deseja seguir.</p>
+
+        <a href="{{ url_for('modules.intermediario_renda_variavel') }}" class="btn btn-secondary">Voltar: Renda Variável</a> {# Ajustar rota #}
+        <a href="{{ url_for('modules.intermediario_cripto_derivativos') }}" class="btn">Próximo: Criptomoedas e Derivativos</a> {# Ajustar rota #}
+    </article>
+
+</div>
+{% endblock %}

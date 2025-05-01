@@ -1,0 +1,98 @@
+/* /home/ubuntu/investidor_academia/src/static/css/quizzes.css */
+
+.quiz-selection .quiz-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.quiz-selection .quiz-item h4 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.btn-start-quiz {
+    margin-top: 10px;
+}
+
+.quiz-area {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #dee2e6;
+    border-color: #adb5bd;
+}
+
+.option-btn:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.option-btn.correct {
+    background-color: #d4edda; /* Verde claro */
+    border-color: #c3e6cb;
+    color: #155724;
+    font-weight: bold;
+}
+
+.option-btn.incorrect {
+    background-color: #f8d7da; /* Vermelho claro */
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+#next-question-btn {
+    margin-top: 20px;
+}
+
+#quiz-result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e2e3e5;
+    border-radius: 5px;
+}
+
+#quiz-result h4 {
+    margin-top: 0;
+}
+
+#result-text {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+

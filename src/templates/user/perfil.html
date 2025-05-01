@@ -1,0 +1,51 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Meu Perfil - Academia do Investidor{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="user-profile">
+        <h2>Meu Perfil</h2>
+        
+        {% if current_user and current_user.is_authenticated %} {# Lógica de exemplo #}
+            <p><strong>Nome:</strong> {{ current_user.nome }}</p>
+            <p><strong>Email:</strong> {{ current_user.email }}</p>
+            
+            <hr>
+
+            <h3>Meu Progresso</h3>
+            <p>Acompanhe sua evolução na trilha de conhecimento.</p>
+            <a href="{{ url_for('resources.roadmap') }}" class="btn">Ver meu Roadmap Detalhado</a>
+            {# Poderia adicionar um resumo do progresso aqui também #}
+
+            <hr>
+
+            <h3>Meus Badges</h3>
+            <p>Conquistas desbloqueadas na sua jornada:</p>
+            <div class="badge-list">
+                <div class="badge">
+                    <img src="{{ url_for('static', filename='img/badges/badge_fundamentos_concluido.png') }}" alt="Badge Fundamentos Concluído">
+                    <span>Fundamentos Concluído</span>
+                </div>
+                <div class="badge">
+                    <img src="{{ url_for('static', filename='img/badges/badge_primeiro_quiz.png') }}" alt="Badge Primeiro Quiz">
+                    <span>Primeiro Quiz</span>
+                </div>
+                {# Adicionar mais badges dinamicamente com base no progresso do usuário #}
+                <div class="badge" style="opacity: 0.5;"> {# Exemplo de badge não conquistado #}
+                    <img src="{{ url_for('static', filename='img/badges/badge_intermediario_concluido.png') }}" alt="Badge Intermediário Concluído">
+                    <span>Intermediário Concluído</span>
+                </div>
+            </div>
+
+            <hr>
+            
+            <a href="{{ url_for('user.logout') }}" class="btn btn-secondary">Sair</a> {# Ajustar rota se necessário #}
+
+        {% else %}
+            <p>Você precisa estar logado para ver seu perfil.</p>
+            <a href="{{ url_for('user.login') }}" class="btn">Fazer Login</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Renda Fixa - Intermediário/Avançado{% endblock %}
+
+{% block content %}
+<div class="container module-content">
+    <h2>Módulo Intermediário/Avançado: Renda Fixa Detalhada</h2>
+
+    <article>
+        <p>Após construir sua base nos fundamentos, é hora de aprofundar seus conhecimentos nos diferentes tipos de investimentos. A Renda Fixa é frequentemente o próximo passo natural para muitos investidores, especialmente aqueles com perfil conservador ou moderado, devido à sua previsibilidade de retorno e menor volatilidade em comparação com a renda variável. No entanto, mesmo dentro da renda fixa, existe uma variedade de produtos com características distintas.</p>
+
+        <p>Investimentos de renda fixa funcionam como empréstimos. Você, investidor, empresta dinheiro para um emissor (que pode ser o governo, um banco ou uma empresa) e, em troca, recebe o valor principal acrescido de juros após um determinado período ou através de pagamentos periódicos. A "fixidez" da renda refere-se ao fato de que as regras de remuneração são definidas no momento da aplicação. Você saberá como seu dinheiro será corrigido, seja por uma taxa prefixada (ex: 10% ao ano), pós-fixada (ex: 100% do CDI) ou híbrida (ex: IPCA + 5% ao ano).</p>
+
+        <section>
+            <h3>Tesouro Direto</h3>
+            <p>O Tesouro Direto é um programa do Tesouro Nacional em parceria com a B3 (a bolsa de valores brasileira) que permite a compra e venda de títulos públicos federais por pessoas físicas de forma online. É considerado o investimento mais seguro do país, pois é garantido pelo Governo Federal. Existem diferentes tipos de títulos:</p>
+            <ul>
+                <li><strong>Tesouro Selic:</strong> Título pós-fixado com rentabilidade atrelada à Taxa Selic. Possui alta liquidez (você pode resgatar quando quiser sem grandes perdas) e baixo risco, sendo ideal para reserva de emergência.</li>
+                <li><strong>Tesouro Prefixado:</strong> Você sabe exatamente quanto receberá no vencimento do título, pois a taxa de juros é definida no momento da compra. Ideal para quem acredita que a taxa de juros (Selic) vai cair.</li>
+                <li><strong>Tesouro IPCA+:</strong> Título híbrido que paga a variação da inflação (IPCA) mais uma taxa de juros prefixada. Protege seu dinheiro da inflação e garante um ganho real. Ideal para objetivos de longo prazo, como aposentadoria. Existem variações com ou sem pagamento de juros semestrais.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>CDB (Certificado de Depósito Bancário)</h3>
+            <p>O CDB é um título emitido por bancos para captar recursos. Ao investir em um CDB, você está emprestando dinheiro para o banco. Assim como no Tesouro Direto, existem CDBs prefixados, pós-fixados (geralmente atrelados ao CDI) e híbridos. A segurança do CDB depende da solidez do banco emissor, mas investimentos de até R$ 250.000 por CPF e por instituição financeira são garantidos pelo Fundo Garantidor de Créditos (FGC) em caso de quebra do banco. A liquidez varia: alguns CDBs têm liquidez diária, enquanto outros só permitem o resgate no vencimento.</p>
+        </section>
+
+        <section>
+            <h3>LCI (Letra de Crédito Imobiliário) e LCA (Letra de Crédito do Agronegócio)</h3>
+            <p>LCI e LCA são títulos de renda fixa lastreados, respectivamente, em créditos do setor imobiliário e do agronegócio. São emitidas por instituições financeiras e possuem uma grande vantagem: são <strong>isentas de Imposto de Renda</strong> para pessoas físicas. Assim como os CDBs, podem ser prefixadas, pós-fixadas (atreladas ao CDI) ou híbridas, e contam com a garantia do FGC para valores até R$ 250.000. A liquidez costuma ser menor, geralmente com resgate apenas no vencimento ou após um período de carência.</p>
+        </section>
+
+        <p>Compreender as características de cada produto de renda fixa – rentabilidade, risco, liquidez e tributação – é essencial para escolher os investimentos mais adequados aos seus objetivos e perfil. A diversificação dentro da própria renda fixa também pode ser uma estratégia interessante.</p>
+
+        <a href="{{ url_for('modules.intermediario_avancado') }}" class="btn btn-secondary">Voltar para Intermediário/Avançado</a>
+        <a href="{{ url_for('modules.intermediario_renda_variavel') }}" class="btn">Próximo: Renda Variável</a> {# Ajustar esta rota quando criada #}
+    </article>
+
+</div>
+{% endblock %}

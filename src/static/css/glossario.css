@@ -1,0 +1,79 @@
+/* /home/ubuntu/investidor_academia/src/static/css/glossario.css */
+
+.glossary-container {
+    margin-top: 20px;
+}
+
+.glossary-search {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.glossary-search input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.glossary-alphabet-filter {
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.glossary-alphabet-filter span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.glossary-alphabet-filter a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.glossary-alphabet-filter a:hover {
+    background-color: #e2e6ea;
+    text-decoration: none;
+}
+
+.glossary-alphabet-filter a.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.glossary-list dt {
+    font-weight: bold;
+    color: #0056b3;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+.glossary-list dd {
+    margin-left: 0; /* Reset default margin */
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-left: 3px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .glossary-search {
+        flex-direction: column;
+    }
+    .glossary-search button {
+        width: 100%;
+    }
+    .glossary-alphabet-filter a {
+        padding: 4px 8px;
+        margin: 1px;
+    }
+}
+

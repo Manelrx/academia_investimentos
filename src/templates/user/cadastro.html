@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Cadastro - Academia do Investidor{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="user-form">
+        <h2>Crie sua Conta</h2>
+        <p>Cadastre-se gratuitamente para ter acesso a todos os recursos e acompanhar seu progresso.</p>
+        <form method="POST" action="{{ url_for('user.cadastro') }}"> {# Action needs adjustment based on actual implementation #}
+            {# Add CSRF token if using Flask-WTF #}
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirme a Senha:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <button type="submit" class="btn">Cadastrar</button>
+        </form>
+        <p>Já tem uma conta? <a href="{{ url_for('user.login') }}">Faça login aqui</a>.</p>
+    </div>
+</div>
+{% endblock %}

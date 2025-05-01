@@ -1,0 +1,39 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Notícias do Mercado Financeiro - Academia do Investidor{% endblock %}
+
+{% block content %}
+<div class="container complementary-content">
+    <h2>Conteúdo Complementar: Notícias Atualizadas do Mercado Financeiro</h2>
+    <p>Mantenha-se informado sobre os últimos acontecimentos que impactam seus investimentos. Acompanhar as notícias é fundamental para entender o contexto econômico e tomar decisões mais embasadas.</p>
+
+    <div class="news-feed">
+        <h3>Últimas Notícias</h3>
+        
+        {# Área onde as notícias seriam carregadas dinamicamente #}
+        <div class="news-item">
+            <h4><a href="#" target="_blank">Banco Central mantém Taxa Selic em X% ao ano</a></h4>
+            <span class="news-source">Fonte: Agência Exemplo | Data: DD/MM/AAAA</span>
+            <p>Em decisão unânime, o COPOM decidiu manter a taxa básica de juros, citando o cenário de inflação e atividade econômica... [Leia mais]</p>
+        </div>
+
+        <div class="news-item">
+            <h4><a href="#" target="_blank">Ibovespa opera em alta com otimismo no exterior</a></h4>
+            <span class="news-source">Fonte: Portal Financeiro | Data: DD/MM/AAAA</span>
+            <p>O principal índice da bolsa brasileira acompanha o bom humor dos mercados internacionais após dados positivos de emprego nos EUA... [Leia mais]</p>
+        </div>
+
+        <div class="news-item">
+            <h4><a href="#" target="_blank">Empresa X divulga resultados do trimestre acima do esperado</a></h4>
+            <span class="news-source">Fonte: Valor Econômico | Data: DD/MM/AAAA</span>
+            <p>As ações da companhia sobem forte no pregão após a divulgação de lucro líquido recorde e aumento da receita... [Leia mais]</p>
+        </div>
+
+        <p><em><strong>Observação:</strong> Em uma aplicação real, esta seção seria alimentada por um feed de notícias de fontes confiáveis (via API ou RSS), atualizado constantemente. Os links acima são apenas exemplos.</em></p>
+        
+    </div>
+
+    <a href="{{ url_for('complementary.index') }}" class="btn btn-secondary">Voltar para Conteúdo Complementar</a> {# Ajustar rota se necessário #}
+
+</div>
+{% endblock %}

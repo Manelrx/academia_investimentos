@@ -1,0 +1,40 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Renda Variável - Intermediário/Avançado{% endblock %}
+
+{% block content %}
+<div class="container module-content">
+    <h2>Módulo Intermediário/Avançado: Renda Variável - Ações e Análises</h2>
+
+    <article>
+        <p>A Renda Variável representa um universo de investimentos com maior potencial de retorno, mas também com maior volatilidade e risco em comparação com a Renda Fixa. Ao investir em renda variável, você não tem garantia sobre a rentabilidade final, que pode variar significativamente de acordo com as condições do mercado, o desempenho da economia e os resultados específicos dos ativos em que você investiu. O principal exemplo de renda variável são as ações negociadas na bolsa de valores.</p>
+
+        <section>
+            <h3>Ações (Stocks)</h3>
+            <p>Comprar uma ação significa adquirir uma pequena fração do capital social de uma empresa de capital aberto (listada na bolsa de valores). Ao se tornar acionista, você se torna sócio daquela empresa, participando dos seus lucros (ou prejuízos) e tendo direito a voto em assembleias (dependendo do tipo de ação). O principal objetivo ao comprar ações é lucrar com a valorização do preço da ação ao longo do tempo (ganho de capital) e/ou com o recebimento de proventos, como os dividendos.</p>
+            <p>O preço das ações flutua constantemente na bolsa de valores, influenciado por uma miríade de fatores: resultados financeiros da empresa, notícias do setor, cenário macroeconômico (juros, inflação, crescimento do PIB), eventos políticos e até mesmo o humor geral do mercado (sentimento dos investidores). Essa volatilidade é a principal fonte de risco, mas também a origem do potencial de altos retornos.</p>
+        </section>
+
+        <section>
+            <h3>Dividendos</h3>
+            <p>Como mencionado nos fundamentos, dividendos são parte do lucro líquido de uma empresa distribuída aos seus acionistas. Empresas mais maduras e lucrativas costumam ter políticas de distribuição de dividendos mais consistentes. Para o investidor, receber dividendos é uma forma de obter renda passiva, ou seja, receber dinheiro periodicamente sem precisar vender suas ações. Muitos investidores focam em construir carteiras de ações de boas empresas pagadoras de dividendos como estratégia de longo prazo, visando a geração de fluxo de caixa constante.</p>
+        </section>
+
+        <section>
+            <h3>Análise Fundamentalista (Fundamental Analysis)</h3>
+            <p>A análise fundamentalista é uma abordagem que busca determinar o "valor intrínseco" de uma ação, ou seja, o seu preço justo com base nos fundamentos da empresa. Analistas fundamentalistas estudam a saúde financeira da companhia, seus resultados (lucro, receita, endividamento), sua posição no mercado, a qualidade da sua gestão, suas perspectivas de crescimento e o cenário econômico em que ela está inserida. O objetivo é identificar empresas sólidas, com bons fundamentos e potencial de valorização a longo prazo, comprando suas ações quando o preço de mercado está abaixo do valor intrínseco estimado. É uma análise mais voltada para o longo prazo.</p>
+        </section>
+
+        <section>
+            <h3>Análise Técnica (Technical Analysis)</h3>
+            <p>A análise técnica, por outro lado, foca no estudo dos gráficos de preços e volumes de negociação das ações. Analistas técnicos (ou grafistas) buscam identificar padrões e tendências nos movimentos passados dos preços para prever movimentos futuros. Eles utilizam diversas ferramentas e indicadores gráficos (médias móveis, suportes, resistências, figuras gráficas) para tomar decisões de compra e venda, geralmente com foco no curto e médio prazo. A premissa básica é que os preços já refletem todas as informações disponíveis (incluindo os fundamentos) e que os movimentos do mercado tendem a seguir padrões repetitivos.</p>
+        </section>
+
+        <p>Tanto a análise fundamentalista quanto a técnica são ferramentas valiosas para o investidor em ações. Muitos investidores combinam elementos de ambas as abordagens em suas estratégias. A escolha entre focar mais em uma ou outra, ou usar uma combinação, dependerá do seu perfil, objetivos e horizonte de investimento.</p>
+
+        <a href="{{ url_for('modules.intermediario_renda_fixa') }}" class="btn btn-secondary">Voltar: Renda Fixa</a> {# Ajustar esta rota quando criada #}
+        <a href="{{ url_for('modules.intermediario_fundos') }}" class="btn">Próximo: Fundos de Investimento, ETFs e FIIs</a> {# Ajustar esta rota quando criada #}
+    </article>
+
+</div>
+{% endblock %}

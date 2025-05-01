@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Login - Academia do Investidor{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="user-form">
+        <h2>Acesse sua Conta</h2>
+        <p>Faça login para acessar seu roadmap personalizado e salvar seus conteúdos favoritos.</p>
+        <form method="POST" action="{{ url_for('user.login') }}"> {# Action needs adjustment based on actual implementation #}
+            {# Add CSRF token if using Flask-WTF #}
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="{{ url_for('user.cadastro') }}">Cadastre-se aqui</a>.</p>
+    </div>
+</div>
+{% endblock %}

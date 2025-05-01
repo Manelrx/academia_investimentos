@@ -1,0 +1,48 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Cursos Gratuitos e Pagos - Academia do Investidor{% endblock %}
+
+{% block content %}
+<div class="container complementary-content">
+    <h2>Conteúdo Complementar: Curadoria de Cursos</h2>
+    <p>Para quem busca um aprendizado mais estruturado ou aprofundado, selecionamos alguns cursos gratuitos e pagos que podem complementar sua formação como investidor.</p>
+
+    <div class="recommendation-list">
+        <h3>Cursos Gratuitos</h3>
+        <div class="recommendation-item course-item">
+            <h4>Educação Financeira para Jovens (B3 Educação)</h4>
+            <p><strong>Instituição:</strong> B3 (Bolsa de Valores do Brasil)</p>
+            <p>Um curso introdutório focado em conceitos básicos de finanças pessoais e investimentos, ideal para quem está começando do zero.</p>
+            <a href="#" target="_blank" class="btn btn-external">Acessar Curso</a> {# Placeholder para link real #}
+        </div>
+        <div class="recommendation-item course-item">
+            <h4>Como Organizar suas Finanças (FGV)</h4>
+            <p><strong>Instituição:</strong> Fundação Getulio Vargas (FGV)</p>
+            <p>Curso online e gratuito que aborda planejamento financeiro pessoal, controle de orçamento e uso consciente do crédito.</p>
+            <a href="#" target="_blank" class="btn btn-external">Acessar Curso</a> {# Placeholder para link real #}
+        </div>
+        <!-- Adicionar mais cursos gratuitos -->
+
+        <h3>Cursos Pagos</h3>
+        <div class="recommendation-item course-item">
+            <h4>Certificações Profissionais (Ex: CPA-10, CPA-20, CEA - ANBIMA)</h4>
+            <p><strong>Instituição:</strong> ANBIMA (Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais)</p>
+            <p>Embora focadas em profissionais do mercado, estudar para essas certificações oferece um conhecimento técnico aprofundado sobre produtos de investimento, regulação e ética.</p>
+            <a href="#" target="_blank" class="btn btn-external">Ver Certificações</a> {# Placeholder para link real #}
+        </div>
+         <div class="recommendation-item course-item">
+            <h4>Cursos de Análise de Ações (Diversas Plataformas)</h4>
+            <p><strong>Instituição:</strong> Várias (Ex: Suno Research, Empiricus, XP Educação, etc.)</p>
+            <p>Existem diversas plataformas que oferecem cursos pagos focados em análise fundamentalista, análise técnica, valuation de empresas e estratégias de investimento em ações.</p>
+            <p><em>Pesquise e compare as opções que melhor se adequam ao seu perfil e objetivo.</em></p>
+            {# Não colocar link direto para concorrentes, apenas mencionar exemplos #}
+        </div>
+        <!-- Adicionar mais cursos pagos -->
+    </div>
+
+    <p><em>Lembre-se de pesquisar a reputação e o conteúdo programático dos cursos antes de se inscrever, especialmente os pagos.</em></p>
+
+    <a href="{{ url_for('complementary.index') }}" class="btn btn-secondary">Voltar para Conteúdo Complementar</a> {# Ajustar rota se necessário #}
+
+</div>
+{% endblock %}

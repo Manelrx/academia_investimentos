@@ -1,0 +1,61 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Simulados e Quizzes - Academia do Investidor{% endblock %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/quizzes.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container resource-content">
+    <h2>Simulados e Quizzes</h2>
+    <p>Teste seus conhecimentos e fixe o aprendizado com nossos quizzes interativos. Selecione um módulo ou tópico para começar.</p>
+
+    <div class="quiz-selection">
+        <h3>Escolha um Quiz:</h3>
+        <div class="quiz-item">
+            <h4>Módulo de Fundamentos - Quiz Geral</h4>
+            <p>Teste seus conhecimentos sobre os conceitos básicos de investimentos, educação financeira e termos essenciais.</p>
+            <button class="btn btn-start-quiz" data-quiz-id="fundamentos_geral">Iniciar Quiz</button>
+        </div>
+
+        <div class="quiz-item">
+            <h4>Módulo Intermediário - Renda Fixa</h4>
+            <p>Avalie seu entendimento sobre Tesouro Direto, CDBs, LCIs e LCAs.</p>
+            <button class="btn btn-start-quiz" data-quiz-id="intermediario_renda_fixa">Iniciar Quiz</button>
+        </div>
+
+        <div class="quiz-item">
+            <h4>Módulo Intermediário - Renda Variável</h4>
+            <p>Verifique seu conhecimento sobre ações, dividendos e tipos de análise.</p>
+            <button class="btn btn-start-quiz" data-quiz-id="intermediario_renda_variavel">Iniciar Quiz</button>
+        </div>
+        
+        <!-- Adicionar mais quizzes conforme o conteúdo é desenvolvido -->
+    </div>
+
+    <div id="quiz-area" class="quiz-area" style="display: none;">
+        <h3 id="quiz-title">Quiz</h3>
+        <div id="question-container">
+            <p id="question-text"></p>
+            <div id="options-container">
+                <!-- Opções serão carregadas aqui -->
+            </div>
+        </div>
+        <button id="next-question-btn" class="btn" style="display: none;">Próxima Pergunta</button>
+        <div id="quiz-result" style="display: none;">
+            <h4>Resultado:</h4>
+            <p id="result-text"></p>
+            <button id="restart-quiz-btn" class="btn btn-secondary">Tentar Novamente</button>
+            <button id="back-to-selection-btn" class="btn btn-secondary">Escolher Outro Quiz</button>
+        </div>
+    </div>
+
+    <a href="{{ url_for('resources.index') }}" class="btn btn-secondary">Voltar para Recursos</a> {# Ajustar rota se necessário #}
+
+</div>
+{% endblock %}
+
+{% block scripts_extra %}
+<script src="{{ url_for('static', filename='js/quizzes.js') }}"></script>
+{% endblock %}

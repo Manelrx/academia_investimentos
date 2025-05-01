@@ -1,0 +1,145 @@
+/* /home/ubuntu/investidor_academia/src/static/css/roadmap.css */
+
+.roadmap-container {
+    margin-top: 20px;
+}
+
+.roadmap-module {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    position: relative; /* For badge positioning */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.roadmap-module h4 {
+    margin-top: 0;
+    color: #0056b3;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    background-color: #e9ecef;
+    border-radius: .25rem;
+    margin-bottom: 15px;
+    height: 20px;
+    overflow: hidden; /* Ensures progress stays within bounds */
+}
+
+.progress {
+    background-color: #28a745; /* Green for progress */
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.roadmap-module ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.roadmap-module li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    position: relative;
+    padding-left: 25px; /* Space for icon */
+}
+
+.roadmap-module li:last-child {
+    border-bottom: none;
+}
+
+/* Status Icons/Markers */
+.roadmap-module li::before {
+    content: \'\';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #adb5bd; /* Default: upcoming (grey) */
+}
+
+.roadmap-module li.completed::before {
+    content: ">" \9; /* Checkmark for IE9 */
+    content: "\2713"; /* Checkmark symbol */
+    background-color: #28a745; /* Green */
+    color: white;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+.roadmap-module li.current::before {
+    background-color: #ffc107; /* Yellow/Orange */
+    /* Optional: Add a pulse animation */
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+}
+
+/* Status Badges */
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.roadmap-module.completed .status-badge {
+    background-color: #28a745; /* Green */
+}
+
+.roadmap-module.in-progress .status-badge {
+    background-color: #ffc107; /* Yellow/Orange */
+    color: #333;
+}
+
+.roadmap-module.upcoming .status-badge {
+    background-color: #6c757d; /* Grey */
+}
+
+/* Placeholder for non-logged-in users */
+.roadmap-placeholder {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.roadmap-placeholder ol {
+    text-align: left;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .status-badge {
+        position: static; /* Position badge normally on small screens */
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+

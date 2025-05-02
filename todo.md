@@ -1,10 +1,10 @@
-# Todo List - Academia do Investidor
+# Todo - Academia do Investidor (Estático - Next.js)
 
-- [X] 001 criar_estrutura_inicial_do_projeto()
-- [X] 002 desenvolver_conteudo_modulo_fundamentos()
-- [X] 003 desenvolver_conteudo_modulo_intermediario_avancado()
-- [X] 004 criar_recursos_didaticos_interativos()
-- [X] 005 desenvolver_conteudo_complementar()
-- [X] 006 implementar_interface_experiencia_usuario()
-- [X] 007 testar_e_validar_site()
-- [ ] 008 finalizar_e_entregar_projeto()
+- [X] 001: Recriar estrutura de layout e estilos globais (layout.tsx, Navbar.tsx, Footer.tsx, globals.css)
+- [X] 002: Recriar páginas principais e módulos (Homepage, Módulos Fundamentos, Módulos Intermediário/Avançado)
+- [X] 003: Adicionar componentes interativos e visuais modernos (Calculadora, Glossário, Quizzes, Mapas Mentais, Infográficos, Roadmap)
+- [X] 004: Aprofundar e organizar conteúdo dos módulos
+- [X] 005: Criar página inicial mais interessante
+- [X] 006: Validar visual e funcionalidade do site estático
+- [X] 012: Gerar build estático para GitHub Pages
+- [ ] 008: Reportar e entregar arquivos ao usuário
